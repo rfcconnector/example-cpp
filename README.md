@@ -38,17 +38,17 @@ if (hr != S_OK)
 Then, set destination and logon credentials and call `Connect()`:
 
 ```cpp
-	session->RfcSystemData->ConnectString = L"SAPLOGON_ID=NPL";
-	session->LogonData->Client = L"001";
-	session->LogonData->User = L"DEVELOPER";
-	session->LogonData->Password = L"developer1";
-	session->LogonData->Language = L"EN";
+session->RfcSystemData->ConnectString = L"SAPLOGON_ID=NPL";
+session->LogonData->Client = L"001";
+session->LogonData->User = L"DEVELOPER";
+session->LogonData->Password = L"developer1";
+session->LogonData->Language = L"EN";
 
-	hr = session->Connect();
-	if (hr != S_OK || session->Error) 
-	{
-		// handle error
-	}
+hr = session->Connect();
+if (hr != S_OK || session->Error) 
+{
+	// handle error
+}
 ```
 
 ## Calling a function module/BAPI
